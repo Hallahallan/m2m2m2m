@@ -10,8 +10,8 @@ const BoatSchema = new Schema(
         name: {type: String, required: true, max: 100},
         status: {type: Boolean, required: true},
         lat: {type: String, required: true},
-        lon: {type: String, required: true},
-        state:{type: String, required: true}
+        lng: {type: String, required: true},
+        state: {type: String, required: true}
     }
 );
 

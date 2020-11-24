@@ -36,7 +36,7 @@ export const boats = [
         img: `boat2.jpg`
     },
     {
-        name: "Sick boat brah",
+        name: "Friendly boat",
         status: true,
         img: `boat15.jpg`
     },
@@ -46,7 +46,7 @@ export const boats = [
         img: `boat12.jpg`
     },
     {
-        name: "my boat is amazing",
+        name: "Amazing boat",
         status: true,
         img: `boat9.jpg`
     }

@@ -5,7 +5,7 @@ const BoatSchema = require("../models/boat");
 
 client.on('connect', () => {
     console.log("Connected to mqtt")
-    client.subscribe('keklife/kekcity')
+    client.subscribe('boatMcBoatFace/coordinates')
 })
 
 client.on('message', (topic, message) => {
@@ -13,7 +13,7 @@ client.on('message', (topic, message) => {
 
     const updateObject = {
         lat: message.split(",")[0],
-        lon: message.split(",")[1]
+        lng: message.split(",")[1]
     }
     console.log('topic:', topic);
     console.log('message:', message);

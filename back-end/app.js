@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const mqtt = require('./controllers/mqttController')
 
-const indexRouter = require('./routes');
 const boatRouter = require('./routes/boatRouter');
 
 const app = express();
@@ -18,7 +17,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.use('/', indexRouter);
-app.use('/boat', boatRouter);
+app.use('/', boatRouter);
 
 module.exports = app;
