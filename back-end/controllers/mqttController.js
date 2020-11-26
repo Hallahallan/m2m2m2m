@@ -11,16 +11,15 @@ client.on('connect', () => {
 client.on('message', (topic, message) => {
     message = message.toString();
 
-    const updateObject = {
-        lat: message.split(",")[0],
-        lng: message.split(",")[1]
-    }
-    console.log('topic:', topic);
-    console.log('message:', message);
+    let latitude = message.split(",")[0]
+    let longitude = message.split(",")[1]
 
     BoatSchema.findOneAndUpdate(
         {name: 'Boat420'},
-        {$set: updateObject},
+        {$set: {
+                lat : [latitude.slice(0, 2), '.', latitude.slice(2)].join(''),
+                lng : [longitude.slice(0, 2), '.', longitude.slice(2)].join(''),
+            }},
         {
             upsert: true,
             useFindAndModify: false,

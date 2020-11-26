@@ -19,3 +19,4 @@ export const MyMapComponent = compose(
         {props.isMarkerShown && <Marker position={{ lat: props.lat, lng: props.lng }} />}
     </GoogleMap>
 );
+

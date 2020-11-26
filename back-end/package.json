@@ -17,6 +17,7 @@
     "nodemon": "^2.0.6"
   },
   "devDependencies": {
+    "@types/express": "^4.17.9",
     "cors": "^2.8.5"
   }
 }
